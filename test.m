@@ -18,7 +18,6 @@ beta(3) = 5;
 beta(4) = 3;
 beta(1) = 1000;
 
-
 ret = [];
 reT = [];
 
@@ -31,7 +30,7 @@ P = 1000;
 L = 3;
 duriation = 1000;
 
-[thist, thisy] = ode45('zhengti_chun',[0 duriation],[prefixParameter, interiorT,exteriorT,waterT,vaporizationL, P,L, beta]);
+[thist, thisy] = ode23('zhengti_chun',[0 duriation],[prefixParameter, interiorT,exteriorT,waterT,vaporizationL, P,L, beta]);
 for i = 1:10
 	thisy(i,13)
 end;

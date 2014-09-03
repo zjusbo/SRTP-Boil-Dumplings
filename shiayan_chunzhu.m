@@ -50,7 +50,7 @@ for i=1:changeTimes
 	end;
 
 
-[thist, thisy] = ode45('zhengti_chun',[0 duriation],[prefixParameter, interiorT,exteriorT,waterT,vaporizationL, P(i),L(i), beta]);
+[thist, thisy] = ode23('zhengti_chun',[0 duriation],[prefixParameter, interiorT,exteriorT,waterT,vaporizationL, P(i),L(i), beta]);
 if length(ret) == 0
 	offset = 0;
 else
